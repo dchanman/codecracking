@@ -69,8 +69,8 @@ if __name__ == "__main__":
         key = sys.argv[2]
     
     cracker = Cracker(ciphertext, key)
-    while cracker.temperature > 0:
-        for i in range(500):
+    while cracker.temperature > 30:
+        for i in range(50000):
             cracker.round()
         cracker.temperature -= 10
     
